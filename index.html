@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galaxia 3D</title>
+  <style>
+    body { margin: 0; overflow: hidden; background: #05050d; }
+    canvas { display: block; }
+    .controls {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+      display: flex;
+      gap: 10px;
+    }
+    button {
+      padding: 10px 15px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.4);
+      cursor: pointer;
+      backdrop-filter: blur(5px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Controles flotantes -->
+  <div class="controls">
+    <button id="toggleBtn">Cambiar Forma</button>
+    <button id="resetCamBtn">Reset Vista</button>
+    <button id="musicBtn">🎵 Reproducir Música</button>
+  </div>
+
+  <canvas id="canvas3d"></canvas>
+
+  <!-- Audio de fondo (reemplaza "musica/cancion.mp3" con la ruta exacta de tu canción) -->
+  <audio id="bgMusic" loop>
+    <source src="Musica/No One Noticed (Extended Spanish).mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
